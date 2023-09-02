@@ -55,7 +55,7 @@ license="BSD"
 homepage="https://hyprland.org/"
 changelog="https://github.com/shadowmax31/Hyprland/releases"
 distfiles="https://github.com/shadowmax31/Hyprland/releases/download/v${version}/source-v${version}.tar.gz"
-checksum=86357dd7f3507c39eae3032e83395c5dcdff8c0e500803c083a4de8ab7317b5e
+checksum=cdd8bd85addeae7f039c6b78f7c87db3be50e2b296b49d57893249d28c2af22d
 
 do_build() {
 	# build hyprland-specific wlroots
