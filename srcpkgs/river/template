@@ -1,24 +1,32 @@
 # Template file for 'river'
 pkgname=river
-version=0.2.4
-revision=2
+version=0.3.0dev
+revision=1
 archs="~i686* ~armv6l* ~armv7l*"
 build_style=zig-build
 configure_args="$(vopt_if xwayland -Dxwayland) -Dpie"
-hostmakedepends="pkg-config wayland-devel scdoc"
+hostmakedepends="pkg-config wayland-devel scdoc git"
 makedepends="wlroots-devel libevdev-devel pixman-devel
  wayland-protocols libxkbcommon-devel wayland-devel"
 depends="$(vopt_if xwayland xorg-server-xwayland)"
 short_desc="Dynamic tiling Wayland compositor"
-maintainer="Isaac Freund <mail@isaacfreund.com>"
+maintainer="shadowmax31 <ety_95@protonmail.com>"
 license="GPL-3.0-only"
-homepage="https://github.com/riverwm/river"
-distfiles="https://github.com/riverwm/river/releases/download/v${version}/river-${version}.tar.gz"
-checksum=26c1c41a65ce3804069afad6988410515cf478d2b76303ebc699766d3d4dc69f
+homepage="https://github.com/shadowmax31/river"
+
+git_src="https://github.com/shadowmax31/river"
+commit_rev="7f30c655c75568ae331ed0243578d91870f3f9c6"
 
 build_options="xwayland"
 build_options_default="xwayland"
 desc_option_xwayland="Enable Xwayland support"
+
+do_fetch() {
+	git clone $git_src $wrksrc
+	cd $wrksrc
+	git reset --hard $commit_rev
+	git submodule update --init
+}
 
 post_install() {
 	vinstall contrib/river.desktop 644 usr/share/wayland-sessions
