@@ -1,7 +1,7 @@
 # Template file for 'river'
 pkgname=river
 version=0.3.0dev
-revision=1
+revision=2
 archs="~i686* ~armv6l* ~armv7l*"
 build_style=zig-build
 configure_args="$(vopt_if xwayland -Dxwayland) -Dpie"
@@ -15,16 +15,16 @@ license="GPL-3.0-only"
 homepage="https://github.com/shadowmax31/river"
 
 git_src="https://github.com/shadowmax31/river"
-commit_rev="7f30c655c75568ae331ed0243578d91870f3f9c6"
+commit_rev="72ca2664a0c7d4f3425320d859490a1dab15cb91"
 
 build_options="xwayland"
 build_options_default="xwayland"
 desc_option_xwayland="Enable Xwayland support"
 
 do_fetch() {
-	git clone $git_src $wrksrc
+	git clone ${git_src} $wrksrc
 	cd $wrksrc
-	git reset --hard $commit_rev
+	git reset --hard ${commit_rev}
 	git submodule update --init
 }
 
