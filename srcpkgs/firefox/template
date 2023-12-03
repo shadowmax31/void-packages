@@ -3,15 +3,15 @@
 # THIS PKG MUST BE SYNCHRONIZED WITH "srcpkgs/firefox-i18n".
 #
 pkgname=firefox
-version=118.0
-revision=2
+version=120.0.1
+revision=1
 build_helper="rust"
 short_desc="Mozilla Firefox web browser"
 maintainer="Duncaen <duncaen@voidlinux.org>"
 license="MPL-2.0, GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://www.mozilla.org/firefox/"
 distfiles="${MOZILLA_SITE}/firefox/releases/${version/beta/b}/source/firefox-${version/beta/b}.source.tar.xz"
-checksum=d0f996116ae234dc7bd59e0d77ddefe268179d7500d16a9488309c826547c97c
+checksum=76e7bb2a144880158444d8e9014f4d080d219bd150c3db405b27e4c7e3959ae2
 
 lib32disabled=yes
 
@@ -63,7 +63,7 @@ post_patch() {
 }
 
 do_build() {
-	ln -s "/usr/bin/python3.11" "${XBPS_WRAPPERDIR}/python3"
+	ln -sf "/usr/bin/python3.11" "${XBPS_WRAPPERDIR}/python3"
 
 	if [ "$build_option_clang" ]; then
 		export CC=clang

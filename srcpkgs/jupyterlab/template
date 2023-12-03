@@ -1,6 +1,6 @@
 # Template file for 'jupyterlab'
 pkgname=jupyterlab
-version=4.0.6
+version=4.0.9
 revision=1
 build_style=python3-pep517
 hostmakedepends="hatchling hatch-jupyter-builder"
@@ -13,7 +13,7 @@ license="custom:jupyterlab"
 homepage="https://github.com/jupyterlab/jupyterlab/"
 changelog="https://raw.githubusercontent.com/jupyterlab/jupyterlab/main/CHANGELOG.md"
 distfiles="${PYPI_SITE}/j/jupyterlab/jupyterlab-${version}.tar.gz"
-checksum=6c43ae5a6a1fd2fdfafcb3454004958bde6da76331abb44cffc6f9e436b19ba1
+checksum=9ebada41d52651f623c0c9f069ddb8a21d6848e4c887d8e5ddc0613166ed5c0b
 
 post_install() {
 	mv ${DESTDIR}/usr/etc ${DESTDIR}

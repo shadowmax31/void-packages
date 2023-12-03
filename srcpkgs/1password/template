@@ -1,6 +1,6 @@
 # Template file for '1password'
 pkgname=1password
-version=8.10.16
+version=8.10.20
 revision=1
 archs="x86_64 aarch64"
 hostmakedepends="gnupg"
@@ -12,14 +12,14 @@ homepage="https://www.1password.com"
 case "${XBPS_TARGET_MACHINE}" in
 	aarch64)
 		_arch="arm64"
-		checksum="4721b5433984af0262df5a72b653a3584e907e15a3bd942e69312d204a60d369
- 92fbaa0ac00c6d22060fb00c13a4ba1aa95ab424d995bbdb03abff9e7d1a02b4"
+		checksum="f0c0c9146e5df35025c6cd61a8bc3b0cff8fb5efa168629f899fdeac6be4b390
+ e90e091da2ff6a472ceae2ce779d16b885f32a86928993fb6ae3072b0a486b62"
 		;;
 
 	x86_64)
 		_arch="x64"
-		checksum="a7d253254c0fa89000ca485f57094490f96a819d21f552d04772b60580019f92
- b0d3ac1995043819654e068a3e423ea50c906add595e562be182d663d6d5230b"
+		checksum="28e2aa23ae2e238e78af22f2ff3743d23c6063719e901168874dbc7edb754f08
+ e292bc311000c9813e0bcf6309e186bd3ed3ce22174ffdaaa88cba641f9a0c4b"
 		;;
 esac
 
