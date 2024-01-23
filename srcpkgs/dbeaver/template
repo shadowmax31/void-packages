@@ -1,6 +1,6 @@
 # Template file for 'dbeaver'
 pkgname=dbeaver
-version=23.2.5
+version=23.3.3
 revision=1
 # the build downloads binaries linked to glibc
 archs="x86_64 aarch64"
@@ -12,10 +12,11 @@ license="Apache-2.0"
 homepage="https://dbeaver.io"
 changelog="https://dbeaver.io/news/"
 distfiles="https://github.com/dbeaver/dbeaver/archive/${version}.tar.gz"
-checksum=f2ae503a5bba9f41bd2d9a477e493da158b4d7c2c4d02ca0d9d46c62f0b7f755
+checksum=88bea41cf0f1f555150c32645903ef7e3f64de52476d9a62eb3bbcd82841169d
 nopie=true
 
 do_build() {
+	. /etc/profile.d/jdk.sh
 	mvn package -P all-platforms
 }
 
