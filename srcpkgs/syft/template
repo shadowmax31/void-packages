@@ -1,17 +1,19 @@
 # Template file for 'syft'
 pkgname=syft
-version=0.100.0
+version=1.3.0
 revision=1
 build_style=go
 build_helper=qemu
 go_import_path="github.com/anchore/syft"
 go_package="github.com/anchore/syft/cmd/syft"
+go_ldflags="-X main.version=${version}"
 short_desc="SBOM generator CLI for container images, filesystems and more"
-maintainer="Jan Christian Grünhage <jan.christian@gruenhage.xyz>"
+maintainer="cinerea0 <cinerea0@protonmail.com>"
 license="Apache-2.0"
 homepage="https://github.com/anchore/syft"
+changelog="https://github.com/anchore/syft/releases"
 distfiles="https://github.com/anchore/syft/archive/refs/tags/v${version}.tar.gz"
-checksum=2dec7f010f2d791702e87ed2642f20de93851aab4f98f3a72fb9b1c7902fc235
+checksum=6916cb0d38c4dc56efe2171bd343b4c9a9fa19a34b46ecedcd209d6e298643b6
 
 post_install() {
 	syft="${DESTDIR}/usr/bin/syft"

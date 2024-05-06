@@ -1,9 +1,11 @@
 # Template file for 'fend'
 pkgname=fend
-version=1.4.1
+version=1.4.7
 revision=1
 build_style=cargo
 make_install_args="--path cli"
+hostmakedepends="pkg-config"
+makedepends="openssl-devel"
 short_desc="Arbitrary-precision unit-aware calculator"
 maintainer="Marcin Puc <tranzystorek.io@protonmail.com>"
 license="GPL-3.0-or-later"
@@ -11,8 +13,8 @@ homepage="https://printfn.github.io/fend/"
 changelog="https://raw.githubusercontent.com/printfn/fend/main/CHANGELOG.md"
 distfiles="https://github.com/printfn/fend/archive/refs/tags/v${version}.tar.gz
  https://github.com/printfn/fend/releases/download/v${version}/fend.1"
-checksum="eb40e376e1da00055112edc583e86ac3913536b35f2f7265de55dca52319a4e4
- 4296b44f1d290125cf43114d4556c3cde1c4124e979a83f6aeb3e924678ed362"
+checksum="a881e210e07ba1c3de1a89d755852359a636afe4091de65c4846767c69dd7f72
+ 53c8ee61a23ba3a82357b7a4533e79db8778f505e3768b6a80a3d39132213320"
 skip_extraction="fend.1"
 
 post_install() {

@@ -1,7 +1,7 @@
 # Template file for 'wine'
 pkgname=wine
-version=9.0
-revision=2
+version=9.8
+revision=1
 _pkgver=${version/r/-r}
 create_wrksrc=yes
 build_wrksrc=wine-${_pkgver}
@@ -11,10 +11,10 @@ short_desc="Run Microsoft Windows applications"
 maintainer="Helmut Pozimski <helmut@pozimski.eu>"
 license="LGPL-2.1-or-later"
 homepage="http://www.winehq.org/"
-distfiles="https://dl.winehq.org/wine/source/${_pkgver}/wine-${_pkgver}.tar.xz
+distfiles="https://dl.winehq.org/wine/source/${version%.*}.x/wine-${_pkgver}.tar.xz
  https://github.com/wine-staging/wine-staging/archive/v${_pkgver}.tar.gz"
-checksum="7cfd090a5395f5b76d95bb5defac8a312c8de4c070c1163b8b58da38330ca6ee
- e3b4af34214a5c962056fc1b360d1f6fc0d33d97cd3ee6d3f9d8758c2cb7f58c"
+checksum="86943c838eda8fad9a7940d4099703394bf1d1be9a1014342fed879c7dc3b993
+ eba01cd743fd317319053e0a58be562dd1d10b67748abb005196066e83610c9e"
 
 # NOTE: wine depends on specific versions of wine-mono and wine-gecko,
 # check for updates to these packages when updating wine
