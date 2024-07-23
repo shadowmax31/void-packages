@@ -1,12 +1,12 @@
 # Template file for 'river'
 pkgname=river
-version=0.3.0dev
-revision=3
+version=0.3.4dev
+revision=1
 archs="~i686* ~armv6l* ~armv7l*"
 build_style=zig-build
 configure_args="$(vopt_if xwayland -Dxwayland) -Dpie"
-hostmakedepends="pkg-config wayland-devel scdoc git"
-makedepends="wlroots0.16-devel libevdev-devel pixman-devel
+hostmakedepends="pkg-config wayland-devel scdoc"
+makedepends="wlroots0.17-devel libevdev-devel pixman-devel
  wayland-protocols libxkbcommon-devel wayland-devel"
 depends="$(vopt_if xwayland xorg-server-xwayland)"
 short_desc="Dynamic tiling Wayland compositor"
@@ -15,7 +15,7 @@ license="GPL-3.0-only"
 homepage="https://github.com/shadowmax31/river"
 
 git_src="https://github.com/shadowmax31/river"
-commit_rev="72ca2664a0c7d4f3425320d859490a1dab15cb91"
+commit_rev="07aa96a0e7ca7b8d1ab2deb30007f92f847e1296"
 
 build_options="xwayland"
 build_options_default="xwayland"
