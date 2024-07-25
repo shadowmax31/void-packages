@@ -1,6 +1,6 @@
 # Template file for 'river'
 pkgname=river
-version=0.3.4dev
+version=0.3.5-local
 revision=1
 archs="~i686* ~armv6l* ~armv7l*"
 build_style=zig-build
@@ -15,7 +15,7 @@ license="GPL-3.0-only"
 homepage="https://github.com/shadowmax31/river"
 
 git_src="https://github.com/shadowmax31/river"
-commit_rev="07aa96a0e7ca7b8d1ab2deb30007f92f847e1296"
+commit_rev="5b20c52d97437844cc830487404ee712ad25805b"
 
 build_options="xwayland"
 build_options_default="xwayland"
