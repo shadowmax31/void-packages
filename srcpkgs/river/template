@@ -1,6 +1,6 @@
 # Template file for 'river'
 pkgname=river
-version=0.3.5-local
+version=0.3.5local
 revision=1
 archs="~i686* ~armv6l* ~armv7l*"
 build_style=zig-build
